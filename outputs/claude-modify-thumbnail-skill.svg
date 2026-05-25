@@ -1,0 +1,158 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#0f1830"/>
+      <stop offset="100%" stop-color="#1a0f25"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffb347"/>
+      <stop offset="100%" stop-color="#ff6a1a"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5fb8ff"/>
+      <stop offset="100%" stop-color="#1e6fd9"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ff7a1a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#3b9eff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3b9eff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="textshadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="4"/>
+      <feOffset dx="0" dy="3"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.9"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g stroke="#1f2a4a" stroke-width="1" opacity="0.5">
+    <path d="M0 120 H1280 M0 240 H1280 M0 360 H1280 M0 480 H1280 M0 600 H1280"/>
+    <path d="M120 0 V720 M240 0 V720 M360 0 V720 M480 0 V720 M600 0 V720 M720 0 V720 M840 0 V720 M960 0 V720"/>
+  </g>
+
+  <!-- Glow blobs -->
+  <ellipse cx="200" cy="500" rx="380" ry="300" fill="url(#glow1)"/>
+  <ellipse cx="1100" cy="360" rx="380" ry="380" fill="url(#glow2)"/>
+
+  <!-- Code editor (left) -->
+  <g transform="translate(50,420)">
+    <rect x="0" y="0" width="540" height="260" rx="14" fill="#0d1424" stroke="#2a3a5e" stroke-width="2"/>
+    <rect x="0" y="0" width="540" height="34" rx="14" fill="#16203a"/>
+    <rect x="0" y="20" width="540" height="14" fill="#16203a"/>
+    <circle cx="20" cy="17" r="6" fill="#ff5f57"/>
+    <circle cx="40" cy="17" r="6" fill="#febc2e"/>
+    <circle cx="60" cy="17" r="6" fill="#28c840"/>
+    <text x="90" y="22" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#7d8aab">skill.py</text>
+
+    <g font-family="Menlo, Consolas, monospace" font-size="15">
+      <text x="20" y="68" fill="#5fb8ff">def</text>
+      <text x="60" y="68" fill="#ffb347">modify_thumbnail</text>
+      <text x="220" y="68" fill="#cfd6e6">(img):</text>
+
+      <text x="40" y="96" fill="#7d8aab"># load Claude skill</text>
+      <text x="40" y="124" fill="#cfd6e6">skill = </text>
+      <text x="110" y="124" fill="#5fb8ff">Claude</text>
+      <text x="170" y="124" fill="#cfd6e6">.load(</text>
+      <text x="225" y="124" fill="#a8e87a">"thumb"</text>
+      <text x="285" y="124" fill="#cfd6e6">)</text>
+
+      <text x="40" y="152" fill="#cfd6e6">edit  = skill.</text>
+      <text x="158" y="152" fill="#ffb347">apply</text>
+      <text x="208" y="152" fill="#cfd6e6">(img)</text>
+
+      <text x="40" y="180" fill="#5fb8ff">return</text>
+      <text x="105" y="180" fill="#cfd6e6">edit.</text>
+      <text x="148" y="180" fill="#ffb347">render</text>
+      <text x="208" y="180" fill="#cfd6e6">()</text>
+
+      <text x="20" y="220" fill="#a8e87a">▸ skill activated</text>
+      <text x="20" y="244" fill="#7d8aab">build successful</text>
+    </g>
+  </g>
+
+  <!-- Title text (left + center, ends before x=1020) -->
+  <g font-family="Impact, Arial Black, sans-serif" font-weight="900" letter-spacing="-2">
+    <text x="50" y="180" font-size="118" fill="#5fb8ff">CLAUDE</text>
+    <text x="50" y="290" font-size="58" fill="#ffffff" stroke="#000" stroke-width="2" filter="url(#textshadow)">MODIFY</text>
+    <text x="50" y="370" font-size="58" fill="#ffffff" stroke="#000" stroke-width="2" filter="url(#textshadow)">THUMBNAIL</text>
+  </g>
+
+  <!-- SKILL highlight bar -->
+  <g transform="translate(50,395)">
+    <rect x="0" y="0" width="300" height="70" rx="10" fill="url(#orange)"/>
+    <text x="150" y="54" font-family="Impact, Arial Black, sans-serif" font-size="56" fill="#0a0e1a" text-anchor="middle" letter-spacing="3">SKILL</text>
+  </g>
+
+  <!-- Accent underline -->
+  <rect x="370" y="418" width="180" height="6" fill="#5fb8ff"/>
+
+  <!-- Robot (right 20%, x: 1024-1280) -->
+  <g transform="translate(1080,360)">
+    <!-- back glow -->
+    <circle cx="0" cy="0" r="160" fill="#ff7a1a" opacity="0.18"/>
+    <circle cx="0" cy="0" r="110" fill="#ff7a1a" opacity="0.25"/>
+
+    <!-- antenna -->
+    <line x1="0" y1="-150" x2="0" y2="-115" stroke="#cfd6e6" stroke-width="4"/>
+    <circle cx="0" cy="-155" r="7" fill="url(#orange)"/>
+
+    <!-- head -->
+    <rect x="-75" y="-115" width="150" height="130" rx="28" fill="#e8e2d5" stroke="#1a1a1a" stroke-width="3"/>
+    <rect x="-75" y="-115" width="150" height="40" rx="28" fill="#d6cfbf"/>
+    
+    <!-- face screen -->
+    <rect x="-58" y="-90" width="116" height="80" rx="14" fill="#0a0e1a"/>
+    <!-- eyes -->
+    <circle cx="-25" cy="-50" r="10" fill="#ff8a3d"/>
+    <circle cx="25" cy="-50" r="10" fill="#ff8a3d"/>
+    <circle cx="-25" cy="-50" r="4" fill="#fff"/>
+    <circle cx="25" cy="-50" r="4" fill="#fff"/>
+    <!-- mouth -->
+    <rect x="-18" y="-28" width="36" height="4" rx="2" fill="#5fb8ff"/>
+
+    <!-- ears -->
+    <rect x="-88" y="-70" width="13" height="40" rx="4" fill="#cfc6b3" stroke="#1a1a1a" stroke-width="2"/>
+    <rect x="75" y="-70" width="13" height="40" rx="4" fill="#cfc6b3" stroke="#1a1a1a" stroke-width="2"/>
+
+    <!-- neck -->
+    <rect x="-20" y="15" width="40" height="18" fill="#cfc6b3" stroke="#1a1a1a" stroke-width="2"/>
+
+    <!-- body -->
+    <rect x="-90" y="33" width="180" height="120" rx="22" fill="#e8e2d5" stroke="#1a1a1a" stroke-width="3"/>
+    <!-- chest panel -->
+    <rect x="-50" y="55" width="100" height="60" rx="8" fill="#0a0e1a"/>
+    <circle cx="-25" cy="85" r="6" fill="#ff8a3d"/>
+    <circle cx="0" cy="85" r="6" fill="#5fb8ff"/>
+    <circle cx="25" cy="85" r="6" fill="#a8e87a"/>
+    
+    <!-- arms hint -->
+    <rect x="-115" y="45" width="22" height="80" rx="11" fill="#d6cfbf" stroke="#1a1a1a" stroke-width="2"/>
+    <rect x="93" y="45" width="22" height="80" rx="11" fill="#d6cfbf" stroke="#1a1a1a" stroke-width="2"/>
+  </g>
+
+  <!-- Bottom text credits -->
+  <g font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="bold" fill="#5fb8ff" opacity="0.85" text-anchor="start">
+    <text x="970" y="32">Hometask AI</text>
+    <text x="970" y="62">https://hometask.io</text>
+    <text x="970" y="92">Steve Buonincontri</text>
+  </g>
+
+  <!-- Bottom accent stripe -->
+  <rect x="0" y="700" width="1280" height="20" fill="url(#orange)"/>
+  
+  <!-- Spark elements -->
+  <g fill="#ffb347">
+    <polygon points="620,80 628,100 648,108 628,116 620,136 612,116 592,108 612,100"/>
+  </g>
+  <g fill="#5fb8ff">
+    <polygon points="900,560 906,574 920,580 906,586 900,600 894,586 880,580 894,574"/>
+  </g>
+</svg>

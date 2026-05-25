@@ -1,0 +1,136 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a1273"/>
+      <stop offset="0.55" stop-color="#5b1ea8"/>
+      <stop offset="1" stop-color="#2a0d5c"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe14d" stop-opacity="0.55"/>
+      <stop offset="0.4" stop-color="#ffb800" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ffb800" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eye" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e8ffff"/>
+      <stop offset="0.4" stop-color="#5ef4ff"/>
+      <stop offset="1" stop-color="#00b8d4"/>
+    </radialGradient>
+    <linearGradient id="head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f1ea"/>
+      <stop offset="1" stop-color="#c9c2b6"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ece6db"/>
+      <stop offset="1" stop-color="#a89f8e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Diagonal stripe accents -->
+  <g opacity="0.07" fill="#ffe14d">
+    <rect x="-100" y="0" width="60" height="900" transform="rotate(20 0 0)"/>
+    <rect x="200" y="-200" width="40" height="900" transform="rotate(20 0 0)"/>
+    <rect x="500" y="-400" width="50" height="900" transform="rotate(20 0 0)"/>
+    <rect x="800" y="-600" width="35" height="900" transform="rotate(20 0 0)"/>
+    <rect x="1100" y="-800" width="55" height="900" transform="rotate(20 0 0)"/>
+  </g>
+
+  <!-- Glow burst behind robot -->
+  <circle cx="985" cy="360" r="320" fill="url(#burst)"/>
+
+  <!-- Top tag -->
+  <g>
+    <rect x="60" y="60" width="240" height="44" rx="22" fill="#ff6a00"/>
+    <text x="180" y="92" font-family="Impact, Arial Black, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">CLAUDE CODE</text>
+  </g>
+
+  <!-- Title line 1 (white) -->
+  <text x="60" y="200" font-family="Impact, Arial Black, sans-serif" font-size="86" fill="#ffffff" letter-spacing="1" stroke="#1a0640" stroke-width="2">CUSTOM SKILL:</text>
+
+  <!-- Yellow highlight rect (single, covers two lines) -->
+  <g transform="translate(40,240)">
+    <rect x="0" y="0" width="820" height="240" fill="#ffe14d" transform="skewX(-10)"/>
+  </g>
+
+  <!-- Title lines 2 & 3 over highlight -->
+  <text x="70" y="340" font-family="Impact, Arial Black, sans-serif" font-size="98" fill="#2a0d5c" letter-spacing="1">CREATING A</text>
+  <text x="70" y="445" font-family="Impact, Arial Black, sans-serif" font-size="108" fill="#2a0d5c" letter-spacing="1">THUMBNAIL</text>
+
+  <!-- Terminal lines bottom-left -->
+  <g font-family="Consolas, Menlo, monospace" font-size="16" fill="#b39ddb" opacity="0.85">
+    <text x="60" y="540">$ claude code --skill thumbnail</text>
+    <text x="60" y="562">&gt; loading custom.skill ...</text>
+    <text x="60" y="584">&gt; rendering 1280x720 ... done</text>
+    <text x="60" y="606">&gt; output: thumbnail.svg</text>
+  </g>
+
+  <!-- Robot -->
+  <g transform="translate(880,170)">
+    <!-- Antenna -->
+    <line x1="115" y1="-30" x2="115" y2="10" stroke="#dcd4c4" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="115" cy="-38" r="11" fill="#ff6a00"/>
+    <circle cx="115" cy="-38" r="4" fill="#ffe14d"/>
+
+    <!-- Ear panels -->
+    <rect x="-8" y="60" width="22" height="60" rx="8" fill="#9c948a"/>
+    <rect x="216" y="60" width="22" height="60" rx="8" fill="#9c948a"/>
+
+    <!-- Head -->
+    <rect x="10" y="10" width="210" height="170" rx="28" fill="url(#head)" stroke="#3a1273" stroke-width="3"/>
+
+    <!-- Eyes -->
+    <rect x="42" y="68" width="55" height="42" rx="10" fill="#0a1a2e"/>
+    <rect x="133" y="68" width="55" height="42" rx="10" fill="#0a1a2e"/>
+    <ellipse cx="69" cy="89" rx="20" ry="15" fill="url(#eye)"/>
+    <ellipse cx="160" cy="89" rx="20" ry="15" fill="url(#eye)"/>
+    <circle cx="63" cy="84" r="4" fill="#ffffff"/>
+    <circle cx="154" cy="84" r="4" fill="#ffffff"/>
+
+    <!-- Mouth grille -->
+    <g stroke="#3a1273" stroke-width="3" stroke-linecap="round">
+      <line x1="78" y1="142" x2="88" y2="142"/>
+      <line x1="98" y1="142" x2="108" y2="142"/>
+      <line x1="118" y1="142" x2="128" y2="142"/>
+      <line x1="138" y1="142" x2="148" y2="142"/>
+    </g>
+
+    <!-- Neck -->
+    <rect x="95" y="180" width="40" height="18" fill="#9c948a"/>
+
+    <!-- Body -->
+    <rect x="-10" y="198" width="250" height="180" rx="24" fill="url(#body)" stroke="#3a1273" stroke-width="3"/>
+
+    <!-- Chest screen -->
+    <rect x="20" y="220" width="135" height="80" rx="8" fill="#0a1a2e"/>
+    <g font-family="Consolas, monospace" font-size="10" fill="#5ef4ff">
+      <text x="28" y="238">&gt; skill.init()</text>
+      <text x="28" y="254">&gt; thumb.draw</text>
+      <text x="28" y="270">&gt; export svg</text>
+      <text x="28" y="286">&gt; ok ✦</text>
+    </g>
+
+    <!-- AI badge -->
+    <circle cx="195" cy="260" r="32" fill="#ff6a00" stroke="#ffffff" stroke-width="3"/>
+    <text x="195" y="271" font-family="Arial Black, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="900">AI</text>
+
+    <!-- Arms -->
+    <rect x="-50" y="220" width="38" height="120" rx="18" fill="#9c948a"/>
+    <circle cx="-31" cy="346" r="22" fill="url(#body)" stroke="#3a1273" stroke-width="3"/>
+    <rect x="242" y="220" width="38" height="120" rx="18" fill="#9c948a"/>
+    <circle cx="261" cy="346" r="22" fill="url(#body)" stroke="#3a1273" stroke-width="3"/>
+
+    <!-- Legs -->
+    <rect x="40" y="378" width="48" height="50" rx="10" fill="#9c948a"/>
+    <rect x="142" y="378" width="48" height="50" rx="10" fill="#9c948a"/>
+    <rect x="30" y="420" width="68" height="20" rx="6" fill="#3a1273"/>
+    <rect x="132" y="420" width="68" height="20" rx="6" fill="#3a1273"/>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="672" width="1280" height="48" fill="#1a0640"/>
+  <text x="24" y="704" font-family="Arial Black, sans-serif" font-size="20" fill="#ffe14d" font-weight="900">HOMETASK AI</text>
+  <text x="540" y="704" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">https://hometask.io</text>
+  <text x="1256" y="704" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="end">sales@hometask.io</text>
+</svg>

@@ -1,0 +1,123 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1410"/>
+      <stop offset="100%" stop-color="#0d0a08"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF9A6B"/>
+      <stop offset="100%" stop-color="#E8633A"/>
+    </linearGradient>
+    <linearGradient id="botBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB088"/>
+      <stop offset="100%" stop-color="#D9542C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#E8633A" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#E8633A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="4" result="o"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  
+  <!-- Subtle grid -->
+  <g stroke="#2a1f18" stroke-width="1" opacity="0.5">
+    <path d="M0 120 H1280 M0 240 H1280 M0 360 H1280 M0 480 H1280 M0 600 H1280"/>
+    <path d="M160 0 V720 M320 0 V720 M480 0 V720 M640 0 V720 M800 0 V720 M960 0 V720 M1120 0 V720"/>
+  </g>
+
+  <!-- Glow behind title -->
+  <ellipse cx="600" cy="380" rx="600" ry="240" fill="url(#glow)"/>
+
+  <!-- Terminal window frame -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="60" width="1160" height="600" rx="16" fill="#161110" stroke="#2d211a" stroke-width="2"/>
+    <rect x="60" y="60" width="1160" height="44" rx="16" fill="#211915"/>
+    <rect x="60" y="92" width="1160" height="12" fill="#211915"/>
+    <circle cx="92" cy="82" r="7" fill="#FF5F56"/>
+    <circle cx="116" cy="82" r="7" fill="#FFBD2E"/>
+    <circle cx="140" cy="82" r="7" fill="#27C93F"/>
+    <text x="640" y="88" font-family="Menlo, Consolas, monospace" font-size="14" fill="#7a6557" text-anchor="middle">claude-code — thumbnails</text>
+  </g>
+
+  <!-- Terminal prompt line -->
+  <g font-family="Menlo, Consolas, monospace" font-size="22">
+    <text x="100" y="160" fill="#E8633A">$</text>
+    <text x="128" y="160" fill="#a89484">claude</text>
+    <text x="208" y="160" fill="#7a6557">design thumbnail.svg</text>
+  </g>
+
+  <!-- Main title -->
+  <g font-family="Impact, Arial Black, sans-serif" text-anchor="start">
+    <text x="100" y="290" font-size="98" fill="#f5e9dd" letter-spacing="-2">YOUTUBE</text>
+    <text x="100" y="390" font-size="98" fill="#f5e9dd" letter-spacing="-2">THUMBNAILS</text>
+    <text x="100" y="478" font-size="54" fill="#a89484" letter-spacing="1" font-family="Helvetica Neue, Arial, sans-serif" font-weight="700">using</text>
+    <text x="245" y="478" font-size="62" fill="url(#orange)" letter-spacing="-1" font-family="Impact, Arial Black, sans-serif">CLAUDE CODE</text>
+  </g>
+
+  <!-- Underline accent -->
+  <rect x="245" y="490" width="540" height="6" fill="url(#orange)"/>
+
+  <!-- Code-like accent lines bottom -->
+  <g font-family="Menlo, Consolas, monospace" font-size="18" fill="#5a4a3e">
+    <text x="100" y="555">// generate hero composition</text>
+    <text x="100" y="585">// export to thumbnail.svg</text>
+    <text x="100" y="615" fill="#E8633A">▮ ready</text>
+    <text x="100" y="615" fill="#E8633A" opacity="0">.</text>
+  </g>
+  <!-- Replace block character with rect -->
+  <rect x="100" y="600" width="14" height="20" fill="#E8633A">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <text x="124" y="615" font-family="Menlo, Consolas, monospace" font-size="18" fill="#E8633A">ready to ship</text>
+
+  <!-- Robot mascot in corner -->
+  <g transform="translate(940, 230)">
+    <!-- antenna -->
+    <line x1="110" y1="20" x2="110" y2="-15" stroke="#D9542C" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="110" cy="-22" r="10" fill="#FFB088"/>
+    <circle cx="110" cy="-22" r="10" fill="none" stroke="#fff" stroke-width="2" opacity="0.4"/>
+    
+    <!-- head -->
+    <rect x="30" y="20" width="160" height="140" rx="28" fill="url(#botBody)" stroke="#3a1f12" stroke-width="3"/>
+    
+    <!-- screen face -->
+    <rect x="50" y="48" width="120" height="84" rx="14" fill="#1a0f08"/>
+    <!-- eyes -->
+    <circle cx="85" cy="90" r="11" fill="#FFD9C0"/>
+    <circle cx="135" cy="90" r="11" fill="#FFD9C0"/>
+    <circle cx="88" cy="87" r="3.5" fill="#1a0f08"/>
+    <circle cx="138" cy="87" r="3.5" fill="#1a0f08"/>
+    <!-- smile -->
+    <path d="M88 112 Q110 124 132 112" stroke="#FFD9C0" stroke-width="4" fill="none" stroke-linecap="round"/>
+    
+    <!-- cheek lights -->
+    <circle cx="42" cy="110" r="6" fill="#FFD9C0" opacity="0.7"/>
+    <circle cx="178" cy="110" r="6" fill="#FFD9C0" opacity="0.7"/>
+    
+    <!-- body -->
+    <rect x="50" y="165" width="120" height="70" rx="14" fill="url(#botBody)" stroke="#3a1f12" stroke-width="3"/>
+    <rect x="68" y="182" width="84" height="14" rx="4" fill="#1a0f08"/>
+    <rect x="70" y="184" width="20" height="10" fill="#7BE3A4"/>
+    <rect x="92" y="184" width="14" height="10" fill="#FFD9C0"/>
+    
+    <!-- arms -->
+    <rect x="14" y="175" width="20" height="50" rx="8" fill="url(#botBody)" stroke="#3a1f12" stroke-width="3"/>
+    <rect x="186" y="175" width="20" height="50" rx="8" fill="url(#botBody)" stroke="#3a1f12" stroke-width="3"/>
+  </g>
+
+  <!-- Corner accent star/sparkle (drawn) -->
+  <g transform="translate(1130, 130)" fill="#E8633A">
+    <polygon points="0,-22 6,-6 22,0 6,6 0,22 -6,6 -22,0 -6,-6"/>
+  </g>
+  <g transform="translate(900, 180)" fill="#FFB088">
+    <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3"/>
+  </g>
+</svg>

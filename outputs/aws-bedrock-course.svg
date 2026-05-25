@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a1273"/>
+      <stop offset="55%" stop-color="#5b1ea8"/>
+      <stop offset="100%" stop-color="#2a0d5c"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe14d" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#ffe14d" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffe14d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eyeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#5ef5ff"/>
+      <stop offset="100%" stop-color="#00b8cc"/>
+    </radialGradient>
+    <linearGradient id="robotBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0eee6"/>
+      <stop offset="100%" stop-color="#c9c4b5"/>
+    </linearGradient>
+    <linearGradient id="robotHead" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7f4ea"/>
+      <stop offset="100%" stop-color="#d4cebe"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Diagonal stripes -->
+  <g opacity="0.07" fill="#ffe14d">
+    <rect x="-100" y="-50" width="40" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="100" y="-50" width="40" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="300" y="-50" width="40" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="500" y="-50" width="40" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="700" y="-50" width="40" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="900" y="-50" width="40" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="1100" y="-50" width="40" height="1000" transform="rotate(20 0 0)"/>
+  </g>
+
+  <!-- Glowing burst behind robot -->
+  <circle cx="980" cy="360" r="340" fill="url(#burst)"/>
+
+  <!-- Top-left tag -->
+  <rect x="60" y="60" width="220" height="44" rx="22" fill="#ff6a00"/>
+  <text x="170" y="91" font-family="Impact, Arial Black, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">CLAUDE CODE</text>
+
+  <!-- Title: COMPLETE -->
+  <text x="60" y="200" font-family="Impact, Arial Black, sans-serif" font-size="96" fill="#ffffff" letter-spacing="2">COMPLETE</text>
+
+  <!-- Yellow skewed highlight covering AWS BEDROCK + COURSE -->
+  <g transform="skewX(-10)">
+    <rect x="20" y="225" width="820" height="260" fill="#ffe14d"/>
+  </g>
+
+  <!-- Highlighted text (no transform) -->
+  <text x="60" y="340" font-family="Impact, Arial Black, sans-serif" font-size="118" fill="#2a0d5c" letter-spacing="2">AWS BEDROCK</text>
+  <text x="60" y="455" font-family="Impact, Arial Black, sans-serif" font-size="118" fill="#2a0d5c" letter-spacing="2">COURSE</text>
+
+  <!-- Subtitle -->
+  <text x="60" y="520" font-family="Impact, Arial Black, sans-serif" font-size="32" fill="#ffe14d" letter-spacing="3">BUILD &amp; DEPLOY GEN AI APPS</text>
+
+  <!-- Terminal code lines -->
+  <g font-family="Consolas, Courier New, monospace" font-size="16" fill="#c8a8ff" opacity="0.85">
+    <text x="60" y="575">$ aws bedrock invoke-model \</text>
+    <text x="60" y="598">  --model-id anthropic.claude-3 \</text>
+    <text x="60" y="621">  --region us-east-1</text>
+  </g>
+
+  <!-- ROBOT -->
+  <g transform="translate(870,180)">
+    <!-- Antenna -->
+    <line x1="160" y1="-10" x2="160" y2="-50" stroke="#d4cebe" stroke-width="6"/>
+    <circle cx="160" cy="-58" r="12" fill="#5ef5ff"/>
+    <circle cx="160" cy="-58" r="6" fill="#ffffff"/>
+
+    <!-- Head -->
+    <rect x="50" y="-10" width="220" height="170" rx="32" fill="url(#robotHead)" stroke="#7d6f55" stroke-width="3"/>
+    <!-- Ear panels -->
+    <rect x="34" y="40" width="20" height="70" rx="6" fill="#a59a82"/>
+    <rect x="266" y="40" width="20" height="70" rx="6" fill="#a59a82"/>
+
+    <!-- Eyes -->
+    <rect x="85" y="40" width="60" height="50" rx="10" fill="#1a0640"/>
+    <rect x="175" y="40" width="60" height="50" rx="10" fill="#1a0640"/>
+    <circle cx="115" cy="65" r="20" fill="url(#eyeGlow)"/>
+    <circle cx="205" cy="65" r="20" fill="url(#eyeGlow)"/>
+
+    <!-- Mouth grille -->
+    <g stroke="#5b4a30" stroke-width="4" stroke-linecap="round">
+      <line x1="115" y1="125" x2="135" y2="125"/>
+      <line x1="145" y1="125" x2="165" y2="125"/>
+      <line x1="175" y1="125" x2="195" y2="125"/>
+      <line x1="205" y1="125" x2="205" y2="125"/>
+    </g>
+
+    <!-- Neck -->
+    <rect x="135" y="160" width="50" height="20" fill="#a59a82"/>
+
+    <!-- Body -->
+    <rect x="40" y="180" width="240" height="190" rx="26" fill="url(#robotBody)" stroke="#7d6f55" stroke-width="3"/>
+
+    <!-- Chest screen -->
+    <rect x="70" y="205" width="120" height="80" rx="6" fill="#1a0640"/>
+    <g font-family="Consolas, monospace" font-size="11" fill="#5ef5ff">
+      <text x="78" y="222">&gt; bedrock</text>
+      <text x="78" y="238">  .invoke()</text>
+      <text x="78" y="254">&gt; model:ok</text>
+      <text x="78" y="270">&gt; ready_</text>
+    </g>
+
+    <!-- AI badge -->
+    <circle cx="225" cy="245" r="32" fill="#ff6a00" stroke="#ffffff" stroke-width="3"/>
+    <text x="225" y="256" font-family="Impact, Arial Black, sans-serif" font-size="30" fill="#ffffff" text-anchor="middle">AI</text>
+
+    <!-- Body buttons -->
+    <circle cx="90" cy="320" r="8" fill="#ff6a00"/>
+    <circle cx="115" cy="320" r="8" fill="#ffe14d"/>
+    <circle cx="140" cy="320" r="8" fill="#5ef5ff"/>
+
+    <!-- Arms -->
+    <rect x="-5" y="195" width="50" height="120" rx="22" fill="url(#robotBody)" stroke="#7d6f55" stroke-width="3"/>
+    <circle cx="20" cy="325" r="26" fill="#d4cebe" stroke="#7d6f55" stroke-width="3"/>
+    <rect x="275" y="195" width="50" height="120" rx="22" fill="url(#robotBody)" stroke="#7d6f55" stroke-width="3"/>
+    <circle cx="300" cy="325" r="26" fill="#d4cebe" stroke="#7d6f55" stroke-width="3"/>
+
+    <!-- Legs -->
+    <rect x="90" y="370" width="40" height="60" rx="10" fill="#a59a82"/>
+    <rect x="190" y="370" width="40" height="60" rx="10" fill="#a59a82"/>
+    <rect x="78" y="425" width="64" height="20" rx="6" fill="#5b4a30"/>
+    <rect x="178" y="425" width="64" height="20" rx="6" fill="#5b4a30"/>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="672" width="1280" height="48" fill="#1a0640"/>
+  <text x="24" y="704" font-family="Arial Black, Helvetica, sans-serif" font-size="20" font-weight="900" fill="#ffe14d">HOMETASK AI</text>
+  <text x="560" y="703" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">https://hometask.io</text>
+  <text x="1256" y="703" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="end">sales@hometask.io</text>
+</svg>

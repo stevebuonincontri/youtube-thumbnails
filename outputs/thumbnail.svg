@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1033"/>
+      <stop offset="0.5" stop-color="#2d1b4e"/>
+      <stop offset="1" stop-color="#0f0820"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8A3D"/>
+      <stop offset="1" stop-color="#D2691E"/>
+    </linearGradient>
+    <linearGradient id="key" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFE17A"/>
+      <stop offset="1" stop-color="#E8A93C"/>
+    </linearGradient>
+    <linearGradient id="terminal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e1e2e"/>
+      <stop offset="1" stop-color="#11111b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FF8A3D" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#FF8A3D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="960" cy="380" r="380" fill="url(#glow)"/>
+
+  <!-- Grid lines for depth -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="180" x2="1280" y2="180"/>
+    <line x1="0" y1="360" x2="1280" y2="360"/>
+    <line x1="0" y1="540" x2="1280" y2="540"/>
+    <line x1="320" y1="0" x2="320" y2="720"/>
+    <line x1="640" y1="0" x2="640" y2="720"/>
+    <line x1="960" y1="0" x2="960" y2="720"/>
+  </g>
+
+  <!-- Title -->
+  <g font-family="Impact, Arial Black, sans-serif" font-weight="900">
+    <text x="60" y="150" font-size="92" fill="#ffffff" letter-spacing="-2">CLAUDE CODE</text>
+    <text x="60" y="240" font-size="62" fill="url(#orange)" letter-spacing="-1">MAKES A THUMBNAIL</text>
+  </g>
+
+  <!-- Subtitle -->
+  <g font-family="Helvetica Neue, Arial, sans-serif">
+    <text x="62" y="285" font-size="26" fill="#a89bd0" font-weight="600" letter-spacing="3">USING THE CLAUDE API + YOUR KEY</text>
+  </g>
+
+  <!-- Terminal mockup -->
+  <g transform="translate(60,330)">
+    <rect width="640" height="340" rx="14" fill="url(#terminal)" stroke="#3a3550" stroke-width="2"/>
+    <!-- Title bar -->
+    <rect width="640" height="38" rx="14" fill="#252535"/>
+    <rect y="24" width="640" height="14" fill="#252535"/>
+    <circle cx="22" cy="19" r="7" fill="#ff5f56"/>
+    <circle cx="46" cy="19" r="7" fill="#ffbd2e"/>
+    <circle cx="70" cy="19" r="7" fill="#27c93f"/>
+    <text x="320" y="25" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" fill="#7a7a90" text-anchor="middle">claude — thumbnail.svg</text>
+
+    <!-- Code lines -->
+    <g font-family="Menlo, Consolas, monospace" font-size="20">
+      <text x="24" y="80" fill="#7a7a90">$</text>
+      <text x="48" y="80" fill="#e8e8f0">claude </text>
+      <text x="138" y="80" fill="#FF8A3D">"design a thumbnail"</text>
+
+      <text x="24" y="118" fill="#27c93f">✦</text>
+      <text x="48" y="118" fill="#a89bd0">Reading API key...</text>
+      <text x="320" y="118" fill="#27c93f" font-weight="700">OK</text>
+
+      <text x="24" y="156" fill="#27c93f">✦</text>
+      <text x="48" y="156" fill="#a89bd0">Composing layout...</text>
+      <text x="320" y="156" fill="#27c93f" font-weight="700">OK</text>
+
+      <text x="24" y="194" fill="#27c93f">✦</text>
+      <text x="48" y="194" fill="#a89bd0">Generating SVG...</text>
+      <text x="320" y="194" fill="#27c93f" font-weight="700">OK</text>
+
+      <text x="24" y="244" fill="#FF8A3D">&gt;</text>
+      <text x="48" y="244" fill="#ffffff" font-weight="700">thumbnail.svg created</text>
+
+      <text x="24" y="290" fill="#7a7a90">$</text>
+      <text x="48" y="290" fill="#e8e8f0">_</text>
+      <rect x="62" y="274" width="14" height="22" fill="#FF8A3D">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- Key illustration -->
+  <g transform="translate(950,440) rotate(-20)">
+    <!-- Glow -->
+    <circle cx="0" cy="0" r="180" fill="url(#glow)"/>
+    <!-- Key bow -->
+    <circle cx="0" cy="0" r="90" fill="url(#key)" stroke="#8B5A1F" stroke-width="4"/>
+    <circle cx="0" cy="0" r="42" fill="#1a1033" stroke="#8B5A1F" stroke-width="4"/>
+    <!-- Shaft -->
+    <rect x="80" y="-22" width="220" height="44" fill="url(#key)" stroke="#8B5A1F" stroke-width="4"/>
+    <!-- Teeth -->
+    <rect x="240" y="22" width="22" height="32" fill="url(#key)" stroke="#8B5A1F" stroke-width="4"/>
+    <rect x="275" y="22" width="22" height="22" fill="url(#key)" stroke="#8B5A1F" stroke-width="4"/>
+    <!-- Highlight -->
+    <ellipse cx="-30" cy="-50" rx="25" ry="14" fill="#fff8d6" opacity="0.7"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g fill="#FFE17A">
+    <polygon points="820,140 830,170 860,180 830,190 820,220 810,190 780,180 810,170"/>
+    <polygon points="1180,300 1186,318 1204,324 1186,330 1180,348 1174,330 1156,324 1174,318"/>
+    <polygon points="740,640 746,656 762,662 746,668 740,684 734,668 718,662 734,656"/>
+  </g>
+</svg>

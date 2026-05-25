@@ -1,0 +1,139 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1410"/>
+      <stop offset="1" stop-color="#0d0a08"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF8A5C"/>
+      <stop offset="1" stop-color="#E8633A"/>
+    </linearGradient>
+    <linearGradient id="pdf1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dcdcdc"/>
+    </linearGradient>
+    <linearGradient id="pdfMerged" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFB088"/>
+      <stop offset="1" stop-color="#E8633A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FF8A5C" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#FF8A5C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  
+  <!-- Subtle grid -->
+  <g opacity="0.06" stroke="#FF8A5C" stroke-width="1">
+    <path d="M0 120 H1280 M0 240 H1280 M0 360 H1280 M0 480 H1280 M0 600 H1280"/>
+    <path d="M160 0 V720 M320 0 V720 M480 0 V720 M640 0 V720 M800 0 V720 M960 0 V720 M1120 0 V720"/>
+  </g>
+
+  <!-- Glow behind merged pdf -->
+  <ellipse cx="970" cy="430" rx="280" ry="240" fill="url(#glow)"/>
+
+  <!-- Terminal window header bar -->
+  <g>
+    <rect x="40" y="40" width="1200" height="44" rx="10" fill="#2a201a"/>
+    <circle cx="68" cy="62" r="7" fill="#FF5F56"/>
+    <circle cx="92" cy="62" r="7" fill="#FFBD2E"/>
+    <circle cx="116" cy="62" r="7" fill="#27C93F"/>
+    <text x="640" y="68" text-anchor="middle" font-family="Menlo, Consolas, monospace" font-size="16" fill="#8a7a6e">claude-code — merge-pdf.skill</text>
+  </g>
+
+  <!-- Robot mascot bottom-left -->
+  <g transform="translate(120,540)">
+    <!-- antenna -->
+    <line x1="55" y1="-10" x2="55" y2="-32" stroke="#FF8A5C" stroke-width="4"/>
+    <circle cx="55" cy="-36" r="6" fill="#FF8A5C"/>
+    <!-- head -->
+    <rect x="10" y="-10" width="90" height="78" rx="14" fill="#3a2a22" stroke="#FF8A5C" stroke-width="3"/>
+    <!-- visor -->
+    <rect x="20" y="8" width="70" height="34" rx="8" fill="#0d0a08"/>
+    <!-- eyes -->
+    <circle cx="40" cy="25" r="6" fill="#FF8A5C"/>
+    <circle cx="70" cy="25" r="6" fill="#FF8A5C"/>
+    <!-- smile -->
+    <path d="M40 54 Q55 64 70 54" stroke="#FF8A5C" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- body -->
+    <rect x="0" y="74" width="110" height="70" rx="12" fill="#2a201a" stroke="#FF8A5C" stroke-width="3"/>
+    <rect x="20" y="92" width="70" height="6" rx="3" fill="#FF8A5C" opacity="0.7"/>
+    <rect x="20" y="106" width="50" height="6" rx="3" fill="#FF8A5C" opacity="0.4"/>
+    <!-- arms -->
+    <rect x="-14" y="84" width="14" height="40" rx="6" fill="#3a2a22" stroke="#FF8A5C" stroke-width="3"/>
+    <rect x="110" y="84" width="14" height="40" rx="6" fill="#3a2a22" stroke="#FF8A5C" stroke-width="3"/>
+  </g>
+
+  <!-- PDF Icons merging -->
+  <g transform="translate(720,210)">
+    <!-- PDF 1 -->
+    <g transform="translate(0,40) rotate(-8)">
+      <rect x="0" y="0" width="150" height="190" rx="8" fill="url(#pdf1)"/>
+      <polygon points="120,0 150,0 150,30" fill="#b8b8b8"/>
+      <polygon points="120,0 150,30 120,30" fill="#dcdcdc"/>
+      <rect x="18" y="120" width="50" height="22" rx="3" fill="#E8633A"/>
+      <text x="43" y="137" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-weight="900" font-size="14" fill="white">PDF</text>
+      <rect x="18" y="50" width="100" height="6" rx="2" fill="#c8c8c8"/>
+      <rect x="18" y="66" width="80" height="6" rx="2" fill="#c8c8c8"/>
+      <rect x="18" y="82" width="90" height="6" rx="2" fill="#c8c8c8"/>
+    </g>
+
+    <!-- PDF 2 -->
+    <g transform="translate(110,80) rotate(6)">
+      <rect x="0" y="0" width="150" height="190" rx="8" fill="url(#pdf1)"/>
+      <polygon points="120,0 150,0 150,30" fill="#b8b8b8"/>
+      <polygon points="120,0 150,30 120,30" fill="#dcdcdc"/>
+      <rect x="18" y="120" width="50" height="22" rx="3" fill="#E8633A"/>
+      <text x="43" y="137" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-weight="900" font-size="14" fill="white">PDF</text>
+      <rect x="18" y="50" width="100" height="6" rx="2" fill="#c8c8c8"/>
+      <rect x="18" y="66" width="80" height="6" rx="2" fill="#c8c8c8"/>
+      <rect x="18" y="82" width="90" height="6" rx="2" fill="#c8c8c8"/>
+    </g>
+
+    <!-- Plus symbol overlap -->
+    <g transform="translate(225,150)">
+      <circle r="38" fill="#1a1410" stroke="#FF8A5C" stroke-width="4"/>
+      <rect x="-20" y="-5" width="40" height="10" rx="2" fill="#FF8A5C"/>
+      <rect x="-5" y="-20" width="10" height="40" rx="2" fill="#FF8A5C"/>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(310,150)">
+      <rect x="0" y="-7" width="50" height="14" fill="#FF8A5C"/>
+      <polygon points="40,-22 70,0 40,22" fill="#FF8A5C"/>
+    </g>
+
+    <!-- Merged PDF -->
+    <g transform="translate(390,30)">
+      <rect x="0" y="0" width="170" height="220" rx="10" fill="url(#pdfMerged)"/>
+      <polygon points="138,0 170,0 170,32" fill="#b84d28"/>
+      <polygon points="138,0 170,32 138,32" fill="#FFB088"/>
+      <rect x="22" y="60" width="120" height="7" rx="2" fill="#fff" opacity="0.85"/>
+      <rect x="22" y="78" width="100" height="7" rx="2" fill="#fff" opacity="0.7"/>
+      <rect x="22" y="96" width="115" height="7" rx="2" fill="#fff" opacity="0.7"/>
+      <rect x="22" y="114" width="80" height="7" rx="2" fill="#fff" opacity="0.6"/>
+      <rect x="22" y="155" width="65" height="28" rx="4" fill="#1a1410"/>
+      <text x="54" y="174" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-weight="900" font-size="16" fill="#FF8A5C">PDF</text>
+    </g>
+  </g>
+
+  <!-- Title text -->
+  <g font-family="Helvetica Neue, Arial Black, sans-serif" font-weight="900">
+    <text x="70" y="245" font-size="92" fill="#FF8A5C" letter-spacing="-3">CLAUDE CODE</text>
+    <text x="70" y="335" font-size="78" fill="#ffffff" letter-spacing="-2">SKILL: MERGE</text>
+    <text x="70" y="415" font-size="78" fill="#ffffff" letter-spacing="-2">PDF FILES</text>
+  </g>
+
+  <!-- prompt line bottom -->
+  <g font-family="Menlo, Consolas, monospace" font-size="22">
+    <text x="320" y="660" fill="#FF8A5C">$</text>
+    <text x="350" y="660" fill="#e8d8c8">claude</text>
+    <text x="445" y="660" fill="#8a7a6e">--skill</text>
+    <text x="540" y="660" fill="#FFB088">merge-pdf</text>
+    <rect x="680" y="642" width="14" height="24" fill="#FF8A5C">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

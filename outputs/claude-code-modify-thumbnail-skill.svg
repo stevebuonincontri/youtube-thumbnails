@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a1273"/>
+      <stop offset="0.55" stop-color="#5b1ea8"/>
+      <stop offset="1" stop-color="#2a0d5c"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffe14d" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#ffb000" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffe14d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eye" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e6ffff"/>
+      <stop offset="0.4" stop-color="#3ff0ff"/>
+      <stop offset="1" stop-color="#0a7a8c"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Diagonal stripe accents -->
+  <g opacity="0.07" fill="#ffe14d">
+    <rect x="-200" y="-50" width="60" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="100" y="-50" width="40" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="400" y="-50" width="80" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="800" y="-50" width="50" height="1000" transform="rotate(20 0 0)"/>
+  </g>
+
+  <!-- Yellow burst behind robot -->
+  <circle cx="980" cy="350" r="320" fill="url(#burst)"/>
+
+  <!-- Orange pill top-left -->
+  <rect x="60" y="55" width="260" height="46" rx="23" fill="#ff6a00"/>
+  <text x="190" y="87" font-family="Impact, Arial Black, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle" letter-spacing="2">CLAUDE CODE</text>
+
+  <!-- Title text -->
+  <text x="60" y="190" font-family="Impact, Arial Black, sans-serif" font-size="76" fill="#ffffff" letter-spacing="1">CUSTOM SKILL:</text>
+
+  <!-- Single skewed yellow rect covering 2 highlight lines -->
+  <g transform="skewX(-10)">
+    <rect x="20" y="220" width="820" height="240" fill="#ffe14d"/>
+  </g>
+  <text x="60" y="310" font-family="Impact, Arial Black, sans-serif" font-size="92" fill="#2a0d5c" letter-spacing="1">MODIFY A</text>
+  <text x="60" y="410" font-family="Impact, Arial Black, sans-serif" font-size="92" fill="#2a0d5c" letter-spacing="1">THUMBNAIL</text>
+
+  <!-- Terminal lines bottom-left -->
+  <g font-family="Consolas, Menlo, monospace" font-size="18" fill="#c9b3ff">
+    <text x="60" y="510">$ claude skill create thumbnail-edit</text>
+    <text x="60" y="538">&gt; loading custom skill...</text>
+    <text x="60" y="566">&gt; modifying layers [#######...] 78%</text>
+    <text x="60" y="594">&gt; export ready_</text>
+  </g>
+
+  <!-- ROBOT -->
+  <g>
+    <!-- Antenna -->
+    <line x1="980" y1="180" x2="980" y2="135" stroke="#cfc6ff" stroke-width="5"/>
+    <circle cx="980" cy="128" r="11" fill="#3ff0ff"/>
+    <circle cx="980" cy="128" r="20" fill="#3ff0ff" opacity="0.25"/>
+
+    <!-- Ears -->
+    <rect x="838" y="245" width="22" height="70" rx="6" fill="#6a4fb8"/>
+    <rect x="1100" y="245" width="22" height="70" rx="6" fill="#6a4fb8"/>
+
+    <!-- Head -->
+    <rect x="855" y="190" width="250" height="180" rx="32" fill="#e7e1ff" stroke="#2a0d5c" stroke-width="4"/>
+    <!-- Eyes -->
+    <rect x="895" y="240" width="70" height="55" rx="10" fill="#0d2030"/>
+    <rect x="995" y="240" width="70" height="55" rx="10" fill="#0d2030"/>
+    <ellipse cx="930" cy="267" rx="26" ry="20" fill="url(#eye)"/>
+    <ellipse cx="1030" cy="267" rx="26" ry="20" fill="url(#eye)"/>
+    <circle cx="938" cy="262" r="5" fill="#ffffff"/>
+    <circle cx="1038" cy="262" r="5" fill="#ffffff"/>
+    <!-- Mouth grille -->
+    <g stroke="#2a0d5c" stroke-width="4" stroke-linecap="round">
+      <line x1="930" y1="335" x2="950" y2="335"/>
+      <line x1="960" y1="335" x2="980" y2="335"/>
+      <line x1="990" y1="335" x2="1010" y2="335"/>
+      <line x1="1020" y1="335" x2="1040" y2="335"/>
+    </g>
+
+    <!-- Neck -->
+    <rect x="955" y="370" width="50" height="20" fill="#9b87d8"/>
+
+    <!-- Body -->
+    <rect x="820" y="390" width="320" height="220" rx="24" fill="#d8d0f5" stroke="#2a0d5c" stroke-width="4"/>
+    <!-- Chest screen -->
+    <rect x="855" y="420" width="180" height="120" rx="10" fill="#1a0640"/>
+    <g font-family="Consolas, monospace" font-size="13" fill="#3ff0ff">
+      <text x="868" y="442">&gt; skill.run()</text>
+      <text x="868" y="462" fill="#ffe14d">&gt; edit.png</text>
+      <text x="868" y="482" fill="#ff8a4d">&gt; layer +1</text>
+      <text x="868" y="502" fill="#3ff0ff">&gt; save_</text>
+    </g>
+    <!-- AI badge -->
+    <circle cx="1085" cy="470" r="38" fill="#ff6a00" stroke="#ffffff" stroke-width="4"/>
+    <text x="1085" y="483" font-family="Impact, Arial Black, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">AI</text>
+
+    <!-- Arms -->
+    <rect x="780" y="410" width="40" height="120" rx="18" fill="#9b87d8" stroke="#2a0d5c" stroke-width="4"/>
+    <circle cx="800" cy="545" r="24" fill="#9b87d8" stroke="#2a0d5c" stroke-width="4"/>
+    <rect x="1140" y="410" width="40" height="120" rx="18" fill="#9b87d8" stroke="#2a0d5c" stroke-width="4"/>
+    <circle cx="1160" cy="545" r="24" fill="#9b87d8" stroke="#2a0d5c" stroke-width="4"/>
+
+    <!-- Legs -->
+    <rect x="880" y="610" width="45" height="50" fill="#9b87d8" stroke="#2a0d5c" stroke-width="4"/>
+    <rect x="1035" y="610" width="45" height="50" fill="#9b87d8" stroke="#2a0d5c" stroke-width="4"/>
+    <rect x="865" y="655" width="75" height="18" rx="6" fill="#2a0d5c"/>
+    <rect x="1020" y="655" width="75" height="18" rx="6" fill="#2a0d5c"/>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="672" width="1280" height="48" fill="#1a0640"/>
+  <text x="20" y="703" font-family="Arial Black, sans-serif" font-size="20" font-weight="bold" fill="#ffe14d">HOMETASK AI</text>
+  <text x="540" y="702" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff">https://hometask.io</text>
+  <text x="1260" y="702" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="end">sales@hometask.io</text>
+</svg>

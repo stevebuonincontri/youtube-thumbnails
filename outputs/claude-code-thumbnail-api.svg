@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#3a1273"/>
+<stop offset="55%" stop-color="#5b1ea8"/>
+<stop offset="100%" stop-color="#2a0d5c"/>
+</linearGradient>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#ffe14d" stop-opacity="0.55"/>
+<stop offset="50%" stop-color="#ffb800" stop-opacity="0.2"/>
+<stop offset="100%" stop-color="#ffe14d" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="eye" cx="50%" cy="50%" r="50%">
+<stop offset="0%" stop-color="#ffffff"/>
+<stop offset="40%" stop-color="#5ef7ff"/>
+<stop offset="100%" stop-color="#0088aa"/>
+</radialGradient>
+</defs>
+
+<rect width="1280" height="720" fill="url(#bg)"/>
+
+<!-- diagonal stripes -->
+<g opacity="0.07" fill="#ffe14d">
+<rect x="-200" y="-50" width="60" height="1000" transform="rotate(20 0 0)"/>
+<rect x="100" y="-50" width="40" height="1000" transform="rotate(20 0 0)"/>
+<rect x="400" y="-50" width="50" height="1000" transform="rotate(20 0 0)"/>
+<rect x="700" y="-50" width="30" height="1000" transform="rotate(20 0 0)"/>
+<rect x="1000" y="-50" width="55" height="1000" transform="rotate(20 0 0)"/>
+</g>
+
+<!-- glow behind robot -->
+<circle cx="990" cy="360" r="340" fill="url(#glow)"/>
+
+<!-- top-left tag -->
+<rect x="60" y="60" width="240" height="44" rx="22" fill="#ff6a00"/>
+<text x="180" y="91" font-family="Impact, Arial Black, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">CLAUDE CODE</text>
+
+<!-- Title -->
+<text x="60" y="200" font-family="Impact, Arial Black, sans-serif" font-size="84" fill="#ffe14d" letter-spacing="1">CREATING A</text>
+<text x="60" y="278" font-family="Impact, Arial Black, sans-serif" font-size="84" fill="#ffffff" letter-spacing="1">THUMBNAIL</text>
+
+<!-- single skewed yellow rect for last 2 lines -->
+<g transform="skewX(-10)">
+<rect x="40" y="320" width="800" height="200" fill="#ffe14d"/>
+</g>
+<text x="70" y="410" font-family="Impact, Arial Black, sans-serif" font-size="78" fill="#2a0d5c" letter-spacing="1">USING AN</text>
+<text x="70" y="490" font-family="Impact, Arial Black, sans-serif" font-size="78" fill="#2a0d5c" letter-spacing="1">API CALL</text>
+
+<!-- terminal lines -->
+<g font-family="Consolas, Menlo, monospace" font-size="16" fill="#b89aff" opacity="0.85">
+<text x="60" y="565">$ claude --create thumbnail.svg</text>
+<text x="60" y="590">&gt; rendering layers... [OK]</text>
+<text x="60" y="615">&gt; exporting 1280x720 ............ done</text>
+</g>
+
+<!-- ROBOT -->
+<g transform="translate(880,180)">
+<!-- antenna -->
+<line x1="120" y1="-10" x2="120" y2="-50" stroke="#cfd8ff" stroke-width="5"/>
+<circle cx="120" cy="-58" r="10" fill="#5ef7ff"/>
+<!-- head -->
+<rect x="30" y="-10" width="180" height="140" rx="26" fill="#e9ecf5" stroke="#3a1273" stroke-width="4"/>
+<!-- ears -->
+<rect x="15" y="35" width="18" height="50" rx="6" fill="#b5b9c9"/>
+<rect x="207" y="35" width="18" height="50" rx="6" fill="#b5b9c9"/>
+<!-- eyes -->
+<rect x="60" y="35" width="40" height="40" rx="8" fill="#0a1830"/>
+<rect x="140" y="35" width="40" height="40" rx="8" fill="#0a1830"/>
+<circle cx="80" cy="55" r="14" fill="url(#eye)"/>
+<circle cx="160" cy="55" r="14" fill="url(#eye)"/>
+<!-- mouth grille -->
+<g stroke="#3a1273" stroke-width="4" stroke-linecap="round">
+<line x1="80" y1="100" x2="92" y2="100"/>
+<line x1="102" y1="100" x2="114" y2="100"/>
+<line x1="124" y1="100" x2="136" y2="100"/>
+<line x1="146" y1="100" x2="158" y2="100"/>
+</g>
+<!-- neck -->
+<rect x="105" y="130" width="30" height="18" fill="#b5b9c9"/>
+<!-- body -->
+<rect x="20" y="148" width="200" height="170" rx="20" fill="#e9ecf5" stroke="#3a1273" stroke-width="4"/>
+<!-- chest screen -->
+<rect x="50" y="170" width="140" height="70" rx="6" fill="#0a1830"/>
+<g font-family="Consolas, monospace" font-size="10" fill="#5ef7ff">
+<text x="58" y="186">&gt; api.call()</text>
+<text x="58" y="202">200 OK</text>
+<text x="58" y="218">render: svg</text>
+<text x="58" y="232">[##########]</text>
+</g>
+<!-- AI badge -->
+<circle cx="120" cy="275" r="26" fill="#ff6a00" stroke="#ffffff" stroke-width="3"/>
+<text x="120" y="283" font-family="Arial Black, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="900">AI</text>
+<!-- arms -->
+<rect x="-8" y="160" width="32" height="110" rx="16" fill="#b5b9c9" stroke="#3a1273" stroke-width="3"/>
+<circle cx="8" cy="280" r="20" fill="#e9ecf5" stroke="#3a1273" stroke-width="3"/>
+<rect x="216" y="160" width="32" height="110" rx="16" fill="#b5b9c9" stroke="#3a1273" stroke-width="3"/>
+<circle cx="232" cy="280" r="20" fill="#e9ecf5" stroke="#3a1273" stroke-width="3"/>
+<!-- legs -->
+<rect x="60" y="318" width="36" height="60" rx="10" fill="#b5b9c9" stroke="#3a1273" stroke-width="3"/>
+<rect x="144" y="318" width="36" height="60" rx="10" fill="#b5b9c9" stroke="#3a1273" stroke-width="3"/>
+<ellipse cx="78" cy="385" rx="28" ry="10" fill="#3a1273"/>
+<ellipse cx="162" cy="385" rx="28" ry="10" fill="#3a1273"/>
+</g>
+
+<!-- footer -->
+<rect x="0" y="672" width="1280" height="48" fill="#1a0640"/>
+<text x="24" y="703" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#ffe14d">HOMETASK AI</text>
+<text x="540" y="703" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">https://hometask.io</text>
+<text x="1256" y="703" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="end">sales@hometask.io</text>
+</svg>

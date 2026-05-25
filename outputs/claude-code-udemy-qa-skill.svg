@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a1273"/>
+      <stop offset="50%" stop-color="#5b1ea8"/>
+      <stop offset="100%" stop-color="#2a0d5c"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe14d" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#ffb000" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffe14d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eye" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#5ff0ff"/>
+      <stop offset="100%" stop-color="#00b3c8"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Diagonal stripe accents -->
+  <g opacity="0.07" fill="#ffe14d">
+    <polygon points="-100,720 200,0 280,0 -20,720"/>
+    <polygon points="200,720 500,0 560,0 260,720"/>
+    <polygon points="950,720 1250,0 1310,0 1010,720"/>
+  </g>
+
+  <!-- Yellow burst behind robot -->
+  <circle cx="980" cy="340" r="320" fill="url(#burst)"/>
+
+  <!-- Orange pill tag -->
+  <rect x="60" y="70" width="280" height="46" rx="23" fill="#ff6a00"/>
+  <text x="200" y="102" font-family="Impact, Arial Black, sans-serif" font-size="26" fill="#ffffff" text-anchor="middle" letter-spacing="2">CLAUDE CODE</text>
+
+  <!-- Title block -->
+  <text x="60" y="195" font-family="Impact, Arial Black, sans-serif" font-size="64" fill="#ffe14d" letter-spacing="1">CUSTOM SKILL</text>
+  <text x="60" y="245" font-family="Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="30" fill="#ffffff" letter-spacing="2">AUTO-GENERATE Q&amp;A WITH AI</text>
+
+  <!-- Single yellow skewed highlight rect for last two lines -->
+  <g transform="translate(60 280)">
+    <rect x="-10" y="0" width="780" height="220" fill="#ffe14d" transform="skewX(-10)"/>
+  </g>
+  <text x="80" y="370" font-family="Impact, Arial Black, sans-serif" font-size="92" fill="#2a0d5c" letter-spacing="1">COURSE Q&amp;A</text>
+  <text x="80" y="465" font-family="Impact, Arial Black, sans-serif" font-size="92" fill="#2a0d5c" letter-spacing="1">FOR UDEMY</text>
+
+  <!-- Terminal decoration -->
+  <g font-family="Consolas, Menlo, monospace" font-size="16" fill="#b59cff" opacity="0.85">
+    <text x="60" y="555">$ claude code --skill course-qa</text>
+    <text x="60" y="580">&gt; parsing transcript... ok</text>
+    <text x="60" y="605">&gt; generating questions... 42 created</text>
+    <text x="60" y="630">&gt; export udemy quiz... done</text>
+  </g>
+
+  <!-- ROBOT -->
+  <g transform="translate(880 200)">
+    <!-- Antenna -->
+    <line x1="100" y1="-30" x2="100" y2="10" stroke="#cfc6ff" stroke-width="5"/>
+    <circle cx="100" cy="-38" r="11" fill="#ffe14d" stroke="#ff6a00" stroke-width="2"/>
+
+    <!-- Head -->
+    <rect x="20" y="10" width="160" height="130" rx="22" fill="#e9e4ff" stroke="#2a0d5c" stroke-width="3"/>
+    <!-- Ear panels -->
+    <rect x="6" y="50" width="18" height="50" rx="6" fill="#b8a8ff" stroke="#2a0d5c" stroke-width="2"/>
+    <rect x="176" y="50" width="18" height="50" rx="6" fill="#b8a8ff" stroke="#2a0d5c" stroke-width="2"/>
+
+    <!-- Eye glow -->
+    <circle cx="65" cy="65" r="28" fill="#00b3c8" opacity="0.35"/>
+    <circle cx="135" cy="65" r="28" fill="#00b3c8" opacity="0.35"/>
+    <!-- Eyes -->
+    <rect x="48" y="52" width="34" height="26" rx="6" fill="url(#eye)"/>
+    <rect x="118" y="52" width="34" height="26" rx="6" fill="url(#eye)"/>
+
+    <!-- Mouth grille -->
+    <g stroke="#2a0d5c" stroke-width="3" stroke-linecap="round">
+      <line x1="65" y1="108" x2="75" y2="108"/>
+      <line x1="83" y1="108" x2="93" y2="108"/>
+      <line x1="101" y1="108" x2="111" y2="108"/>
+      <line x1="119" y1="108" x2="129" y2="108"/>
+    </g>
+
+    <!-- Neck -->
+    <rect x="80" y="140" width="40" height="14" fill="#b8a8ff" stroke="#2a0d5c" stroke-width="2"/>
+
+    <!-- Body -->
+    <rect x="10" y="154" width="180" height="140" rx="18" fill="#f1ecff" stroke="#2a0d5c" stroke-width="3"/>
+
+    <!-- Chest screen -->
+    <rect x="30" y="172" width="140" height="70" rx="6" fill="#1a0640"/>
+    <g stroke="#5ff0ff" stroke-width="3" stroke-linecap="round">
+      <line x1="40" y1="186" x2="100" y2="186"/>
+      <line x1="40" y1="200" x2="130" y2="200"/>
+      <line x1="40" y1="214" x2="85" y2="214"/>
+      <line x1="40" y1="228" x2="115" y2="228"/>
+    </g>
+    <!-- AI badge -->
+    <circle cx="100" cy="270" r="20" fill="#ff6a00" stroke="#ffffff" stroke-width="3"/>
+    <text x="100" y="277" font-family="Helvetica Neue, Arial Black, sans-serif" font-weight="900" font-size="18" fill="#ffffff" text-anchor="middle">AI</text>
+
+    <!-- Arms -->
+    <rect x="-22" y="170" width="32" height="90" rx="14" fill="#b8a8ff" stroke="#2a0d5c" stroke-width="3"/>
+    <circle cx="-6" cy="270" r="18" fill="#e9e4ff" stroke="#2a0d5c" stroke-width="3"/>
+    <rect x="190" y="170" width="32" height="90" rx="14" fill="#b8a8ff" stroke="#2a0d5c" stroke-width="3"/>
+    <circle cx="206" cy="270" r="18" fill="#e9e4ff" stroke="#2a0d5c" stroke-width="3"/>
+
+    <!-- Legs -->
+    <rect x="45" y="294" width="36" height="50" rx="10" fill="#b8a8ff" stroke="#2a0d5c" stroke-width="3"/>
+    <rect x="119" y="294" width="36" height="50" rx="10" fill="#b8a8ff" stroke="#2a0d5c" stroke-width="3"/>
+    <ellipse cx="63" cy="350" rx="26" ry="10" fill="#2a0d5c"/>
+    <ellipse cx="137" cy="350" rx="26" ry="10" fill="#2a0d5c"/>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="672" width="1280" height="48" fill="#1a0640"/>
+  <text x="24" y="703" font-family="Helvetica Neue, Arial Black, sans-serif" font-weight="900" font-size="20" fill="#ffe14d">HOMETASK AI</text>
+  <text x="540" y="703" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">https://hometask.io</text>
+  <text x="1256" y="703" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="end">sales@hometask.io</text>
+</svg>

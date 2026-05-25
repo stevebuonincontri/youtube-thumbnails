@@ -1,0 +1,143 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a1273"/>
+      <stop offset="55%" stop-color="#5b1ea8"/>
+      <stop offset="100%" stop-color="#2a0d5c"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe14d" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#ffb020" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffb020" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eye" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#7ff0ff"/>
+      <stop offset="100%" stop-color="#00b8d4"/>
+    </radialGradient>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3eee0"/>
+      <stop offset="100%" stop-color="#c9bfa8"/>
+    </linearGradient>
+    <linearGradient id="headGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fcf7e8"/>
+      <stop offset="100%" stop-color="#d9cfb6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Diagonal stripe accents -->
+  <g opacity="0.07" fill="#ffe14d">
+    <rect x="-100" y="-50" width="60" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="200" y="-50" width="40" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="500" y="-50" width="80" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="900" y="-50" width="50" height="1000" transform="rotate(20 0 0)"/>
+    <rect x="1200" y="-50" width="30" height="1000" transform="rotate(20 0 0)"/>
+  </g>
+
+  <!-- Glowing burst behind robot -->
+  <circle cx="980" cy="370" r="340" fill="url(#burst)"/>
+
+  <!-- Orange CLAUDE CODE pill, top left -->
+  <g>
+    <rect x="60" y="55" width="280" height="52" rx="26" fill="#ff6a00"/>
+    <text x="200" y="91" font-family="Impact, Arial Black, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" letter-spacing="2">CLAUDE CODE</text>
+  </g>
+
+  <!-- Title: CUSTOM SKILL (white) -->
+  <text x="60" y="220" font-family="Impact, Arial Black, sans-serif" font-size="92" fill="#ffffff" letter-spacing="2">CUSTOM SKILL</text>
+
+  <!-- Yellow highlight rect for MERGING PDFs (single skewed rect) -->
+  <g transform="translate(60,250)">
+    <rect x="-10" y="0" width="780" height="220" fill="#ffe14d" transform="skewX(-10)"/>
+  </g>
+
+  <!-- MERGING PDFs text on top, no transform -->
+  <text x="80" y="345" font-family="Impact, Arial Black, sans-serif" font-size="110" fill="#2a0d5c" letter-spacing="2">MERGING</text>
+  <text x="80" y="450" font-family="Impact, Arial Black, sans-serif" font-size="110" fill="#2a0d5c" letter-spacing="2">PDFs</text>
+
+  <!-- Tutorial subtitle -->
+  <text x="60" y="510" font-family="Helvetica Neue, Arial, sans-serif" font-weight="bold" font-size="26" fill="#ffe14d" letter-spacing="3">STEP-BY-STEP TUTORIAL</text>
+
+  <!-- Terminal/code decoration bottom-left -->
+  <g font-family="Consolas, Menlo, monospace" font-size="16" fill="#b9a0ff" opacity="0.75">
+    <text x="60" y="560">$ claude skill create merge-pdfs</text>
+    <text x="60" y="585">&gt; loading PDF toolkit...</text>
+    <text x="60" y="610">&gt; combining 3 files into output.pdf</text>
+    <text x="60" y="635" fill="#7fff9a">&gt; done in 1.42s</text>
+  </g>
+
+  <!-- ROBOT -->
+  <g transform="translate(870,180)">
+    <!-- Antenna -->
+    <line x1="170" y1="-10" x2="170" y2="-50" stroke="#cfc5ad" stroke-width="6"/>
+    <circle cx="170" cy="-58" r="12" fill="#ff6a00"/>
+    <circle cx="170" cy="-58" r="5" fill="#ffe14d"/>
+
+    <!-- Head -->
+    <rect x="55" y="-10" width="230" height="180" rx="28" fill="url(#headGrad)" stroke="#3a1273" stroke-width="3"/>
+
+    <!-- Ear panels -->
+    <rect x="40" y="40" width="20" height="80" rx="6" fill="#a89878" stroke="#3a1273" stroke-width="2"/>
+    <rect x="280" y="40" width="20" height="80" rx="6" fill="#a89878" stroke="#3a1273" stroke-width="2"/>
+
+    <!-- Eye glow -->
+    <rect x="85" y="40" width="65" height="50" rx="10" fill="#0a2a3a"/>
+    <rect x="190" y="40" width="65" height="50" rx="10" fill="#0a2a3a"/>
+    <ellipse cx="117" cy="65" rx="26" ry="20" fill="url(#eye)"/>
+    <ellipse cx="222" cy="65" rx="26" ry="20" fill="url(#eye)"/>
+    <circle cx="125" cy="60" r="5" fill="#ffffff"/>
+    <circle cx="230" cy="60" r="5" fill="#ffffff"/>
+
+    <!-- Mouth grille -->
+    <g stroke="#3a1273" stroke-width="4" stroke-linecap="round">
+      <line x1="120" y1="130" x2="135" y2="130"/>
+      <line x1="150" y1="130" x2="165" y2="130"/>
+      <line x1="180" y1="130" x2="195" y2="130"/>
+      <line x1="210" y1="130" x2="225" y2="130"/>
+    </g>
+
+    <!-- Neck -->
+    <rect x="140" y="170" width="60" height="20" fill="#a89878"/>
+
+    <!-- Body -->
+    <rect x="35" y="190" width="270" height="200" rx="22" fill="url(#bodyGrad)" stroke="#3a1273" stroke-width="3"/>
+
+    <!-- Chest screen with code lines -->
+    <rect x="65" y="215" width="160" height="100" rx="8" fill="#1a0640"/>
+    <g stroke="#7ff0ff" stroke-width="4" stroke-linecap="round">
+      <line x1="75" y1="232" x2="135" y2="232"/>
+      <line x1="140" y1="232" x2="170" y2="232" stroke="#ffe14d"/>
+      <line x1="75" y1="250" x2="110" y2="250" stroke="#ff6a00"/>
+      <line x1="115" y1="250" x2="180" y2="250"/>
+      <line x1="75" y1="268" x2="160" y2="268"/>
+      <line x1="75" y1="286" x2="125" y2="286" stroke="#ffe14d"/>
+      <line x1="130" y1="286" x2="200" y2="286"/>
+      <line x1="75" y1="304" x2="145" y2="304"/>
+    </g>
+
+    <!-- AI badge -->
+    <circle cx="255" cy="265" r="35" fill="#ff6a00" stroke="#3a1273" stroke-width="3"/>
+    <text x="255" y="277" font-family="Impact, Arial Black, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">AI</text>
+
+    <!-- Arms -->
+    <rect x="-5" y="210" width="45" height="120" rx="20" fill="#c9bfa8" stroke="#3a1273" stroke-width="3"/>
+    <circle cx="17" cy="345" r="25" fill="#a89878" stroke="#3a1273" stroke-width="3"/>
+    <rect x="300" y="210" width="45" height="120" rx="20" fill="#c9bfa8" stroke="#3a1273" stroke-width="3"/>
+    <circle cx="322" cy="345" r="25" fill="#a89878" stroke="#3a1273" stroke-width="3"/>
+
+    <!-- Legs -->
+    <rect x="85" y="390" width="50" height="60" rx="10" fill="#a89878" stroke="#3a1273" stroke-width="3"/>
+    <rect x="205" y="390" width="50" height="60" rx="10" fill="#a89878" stroke="#3a1273" stroke-width="3"/>
+    <rect x="75" y="445" width="70" height="20" rx="8" fill="#3a1273"/>
+    <rect x="195" y="445" width="70" height="20" rx="8" fill="#3a1273"/>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="672" width="1280" height="48" fill="#1a0640"/>
+  <text x="24" y="704" font-family="Helvetica Neue, Arial, sans-serif" font-weight="bold" font-size="20" fill="#ffe14d">HOMETASK AI</text>
+  <text x="500" y="704" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff">https://hometask.io</text>
+  <text x="1256" y="704" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="end">sales@hometask.io</text>
+</svg>

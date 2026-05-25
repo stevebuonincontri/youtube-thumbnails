@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a1273"/>
+      <stop offset="55%" stop-color="#5b1ea8"/>
+      <stop offset="100%" stop-color="#2a0d5c"/>
+    </linearGradient>
+    <radialGradient id="burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe14d" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#ffb800" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffb800" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="eye" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#e6ffff"/>
+      <stop offset="40%" stop-color="#3ff0ff"/>
+      <stop offset="100%" stop-color="#0099b3"/>
+    </radialGradient>
+    <linearGradient id="robotBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4f1ea"/>
+      <stop offset="100%" stop-color="#c9c2b3"/>
+    </linearGradient>
+    <linearGradient id="robotHead" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf8f2"/>
+      <stop offset="100%" stop-color="#d4ccbb"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- Diagonal stripes -->
+  <g opacity="0.07" fill="#ffe14d">
+    <rect x="-200" y="-100" width="60" height="1100" transform="rotate(20 100 360)"/>
+    <rect x="100" y="-100" width="40" height="1100" transform="rotate(20 100 360)"/>
+    <rect x="380" y="-100" width="80" height="1100" transform="rotate(20 100 360)"/>
+    <rect x="700" y="-100" width="40" height="1100" transform="rotate(20 100 360)"/>
+    <rect x="900" y="-100" width="60" height="1100" transform="rotate(20 100 360)"/>
+  </g>
+
+  <!-- Radial burst behind robot -->
+  <circle cx="980" cy="360" r="340" fill="url(#burst)"/>
+
+  <!-- Top-left tag -->
+  <g>
+    <rect x="60" y="60" width="260" height="44" rx="22" fill="#ff6a00"/>
+    <text x="190" y="91" font-family="Impact, Arial Black, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">CLAUDE CODE</text>
+  </g>
+
+  <!-- Title -->
+  <text x="60" y="195" font-family="Impact, Arial Black, sans-serif" font-size="78" fill="#ffe14d" letter-spacing="1">ADDING GITHUB</text>
+  <text x="60" y="270" font-family="Impact, Arial Black, sans-serif" font-size="58" fill="#ffffff" letter-spacing="1">TO A</text>
+
+  <!-- Single skewed yellow rect behind last 2 lines -->
+  <g transform="skewX(-10)">
+    <rect x="20" y="305" width="820" height="200" fill="#ffe14d"/>
+  </g>
+  <text x="60" y="385" font-family="Impact, Arial Black, sans-serif" font-size="84" fill="#2a0d5c" letter-spacing="1">CUSTOM</text>
+  <text x="60" y="475" font-family="Impact, Arial Black, sans-serif" font-size="84" fill="#2a0d5c" letter-spacing="1">SKILL</text>
+
+  <!-- Terminal lines bottom-left -->
+  <g font-family="Consolas, Menlo, monospace" font-size="16" fill="#b89cff">
+    <text x="60" y="555">$ claude skills add github</text>
+    <text x="60" y="580" fill="#9b7fe0">&gt; connecting repository...</text>
+    <text x="60" y="605" fill="#7dffb0">&gt; auth: OK  hooks: ready</text>
+    <text x="60" y="630" fill="#b89cff">$ _</text>
+  </g>
+
+  <!-- Robot -->
+  <g transform="translate(880,180)">
+    <!-- Antenna -->
+    <line x1="125" y1="-10" x2="125" y2="-50" stroke="#d4ccbb" stroke-width="5"/>
+    <circle cx="125" cy="-58" r="10" fill="#3ff0ff"/>
+    <circle cx="125" cy="-58" r="16" fill="#3ff0ff" opacity="0.3"/>
+
+    <!-- Ears -->
+    <rect x="0" y="55" width="20" height="60" rx="6" fill="#a89e8a"/>
+    <rect x="230" y="55" width="20" height="60" rx="6" fill="#a89e8a"/>
+
+    <!-- Head -->
+    <rect x="20" y="0" width="210" height="170" rx="32" fill="url(#robotHead)" stroke="#2a0d5c" stroke-width="3"/>
+
+    <!-- Eye panel -->
+    <rect x="45" y="40" width="160" height="70" rx="14" fill="#1a0640"/>
+    <!-- Eyes -->
+    <circle cx="90" cy="75" r="22" fill="url(#eye)"/>
+    <circle cx="160" cy="75" r="22" fill="url(#eye)"/>
+    <circle cx="84" cy="68" r="6" fill="#ffffff"/>
+    <circle cx="154" cy="68" r="6" fill="#ffffff"/>
+
+    <!-- Mouth grille -->
+    <g stroke="#2a0d5c" stroke-width="3" stroke-linecap="round">
+      <line x1="90" y1="138" x2="100" y2="138"/>
+      <line x1="110" y1="138" x2="120" y2="138"/>
+      <line x1="130" y1="138" x2="140" y2="138"/>
+      <line x1="150" y1="138" x2="160" y2="138"/>
+    </g>
+
+    <!-- Neck -->
+    <rect x="105" y="170" width="40" height="20" fill="#a89e8a"/>
+
+    <!-- Body -->
+    <rect x="-10" y="190" width="270" height="190" rx="26" fill="url(#robotBody)" stroke="#2a0d5c" stroke-width="3"/>
+
+    <!-- Chest screen -->
+    <rect x="20" y="215" width="150" height="100" rx="8" fill="#1a0640"/>
+    <g font-family="Consolas, monospace" font-size="11" fill="#7dffb0">
+      <text x="30" y="235">git push</text>
+      <text x="30" y="252" fill="#3ff0ff">+ main</text>
+      <text x="30" y="269" fill="#ffe14d">skill.md</text>
+      <text x="30" y="286" fill="#ff6a00">deploy</text>
+      <text x="30" y="303" fill="#b89cff">ok ok ok</text>
+    </g>
+
+    <!-- AI badge -->
+    <circle cx="210" cy="295" r="32" fill="#ff6a00" stroke="#1a0640" stroke-width="3"/>
+    <text x="210" y="306" font-family="Impact, Arial Black, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle">AI</text>
+
+    <!-- Arms -->
+    <rect x="-50" y="210" width="40" height="110" rx="18" fill="#a89e8a"/>
+    <circle cx="-30" cy="330" r="22" fill="url(#robotHead)" stroke="#2a0d5c" stroke-width="3"/>
+    <rect x="260" y="210" width="40" height="110" rx="18" fill="#a89e8a"/>
+    <circle cx="280" cy="330" r="22" fill="url(#robotHead)" stroke="#2a0d5c" stroke-width="3"/>
+
+    <!-- Legs -->
+    <rect x="45" y="380" width="50" height="50" rx="10" fill="#a89e8a"/>
+    <rect x="155" y="380" width="50" height="50" rx="10" fill="#a89e8a"/>
+    <rect x="35" y="425" width="70" height="20" rx="6" fill="#2a0d5c"/>
+    <rect x="145" y="425" width="70" height="20" rx="6" fill="#2a0d5c"/>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="672" width="1280" height="48" fill="#1a0640"/>
+  <text x="24" y="703" font-family="Helvetica Neue, Arial, sans-serif" font-weight="bold" font-size="20" fill="#ffe14d">HOMETASK AI</text>
+  <text x="540" y="703" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff">https://hometask.io</text>
+  <text x="1256" y="703" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="end">sales@hometask.io</text>
+</svg>

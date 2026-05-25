@@ -1,0 +1,106 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1f"/>
+      <stop offset="100%" stop-color="#0c0c10"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF8A5B"/>
+      <stop offset="50%" stop-color="#FF6B47"/>
+      <stop offset="100%" stop-color="#E85D3A"/>
+    </linearGradient>
+    <linearGradient id="coralVert" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFB088"/>
+      <stop offset="100%" stop-color="#E85D3A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FF6B47" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FF6B47" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#grid)"/>
+  <ellipse cx="980" cy="360" rx="520" ry="380" fill="url(#glow)"/>
+
+  <!-- Terminal window -->
+  <g transform="translate(70,150)">
+    <rect width="700" height="430" rx="14" fill="#15151b" stroke="#2a2a35" stroke-width="1.5"/>
+    <rect width="700" height="42" rx="14" fill="#1f1f28"/>
+    <rect y="28" width="700" height="14" fill="#1f1f28"/>
+    <circle cx="24" cy="21" r="6" fill="#ff5f57"/>
+    <circle cx="46" cy="21" r="6" fill="#febc2e"/>
+    <circle cx="68" cy="21" r="6" fill="#28c840"/>
+    <text x="350" y="26" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#6b6b78" text-anchor="middle" font-weight="500">claude-code — thumbnail.skill</text>
+
+    <!-- Code lines -->
+    <g font-family="Menlo, Consolas, monospace" font-size="17">
+      <text x="30" y="90" fill="#6b6b78">$</text>
+      <text x="52" y="90" fill="#e8e8ee">claude</text>
+      <text x="125" y="90" fill="#FF8A5B">--skill</text>
+      <text x="205" y="90" fill="#9bd0ff">thumbnail</text>
+
+      <text x="30" y="135" fill="#6b6b78">›</text>
+      <text x="52" y="135" fill="#8a8a96">loading skill...</text>
+      <text x="220" y="135" fill="#7ad9a1">ok</text>
+
+      <text x="30" y="170" fill="#6b6b78">›</text>
+      <text x="52" y="170" fill="#8a8a96">design system</text>
+      <text x="200" y="170" fill="#7ad9a1">loaded</text>
+
+      <text x="30" y="220" fill="#FF8A5B" font-weight="700">SKILL</text>
+      <text x="115" y="220" fill="#e8e8ee">thumbnail.create({</text>
+
+      <text x="70" y="250" fill="#c8b6ff">title:</text>
+      <text x="125" y="250" fill="#ffd29b">"Create a</text>
+      <text x="70" y="278" fill="#ffd29b">Thumbnail..."</text>
+
+      <text x="70" y="308" fill="#c8b6ff">style:</text>
+      <text x="130" y="308" fill="#ffd29b">"claude-dark"</text>
+
+      <text x="70" y="336" fill="#c8b6ff">accent:</text>
+      <text x="140" y="336" fill="#ffd29b">"coral"</text>
+
+      <text x="30" y="366" fill="#e8e8ee">})</text>
+
+      <text x="30" y="400" fill="#7ad9a1">✓ rendered 1280×720</text>
+    </g>
+    <!-- cursor -->
+    <rect x="208" y="386" width="11" height="20" fill="#FF8A5B">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- SKILL badge -->
+  <g transform="translate(820,170)">
+    <rect width="150" height="44" rx="22" fill="url(#coral)"/>
+    <circle cx="24" cy="22" r="6" fill="#1a1a1f"/>
+    <text x="86" y="30" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="800" fill="#1a1a1f" text-anchor="middle" letter-spacing="2">SKILL</text>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(820,240)">
+    <text font-family="Helvetica Neue, Arial Black, sans-serif" font-size="78" font-weight="900" fill="#ffffff" letter-spacing="-3">
+      <tspan x="0" y="0">Build a</tspan>
+      <tspan x="0" y="82">Thumbnail</tspan>
+    </text>
+    <text font-family="Helvetica Neue, Arial Black, sans-serif" font-size="58" font-weight="800" letter-spacing="-2">
+      <tspan x="0" y="158" fill="#9a9aa8">with </tspan>
+      <tspan fill="url(#coralVert)">Claude Code</tspan>
+    </text>
+  </g>
+
+  <!-- Bottom accent line -->
+  <rect x="820" y="430" width="120" height="5" rx="2" fill="url(#coral)"/>
+  <text x="820" y="475" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="600" fill="#8a8a96" letter-spacing="3">DESIGN · CODE · SHIP</text>
+
+  <!-- Decorative shapes -->
+  <g opacity="0.9">
+    <polygon points="1180,540 1230,565 1180,590 1130,565" fill="none" stroke="#FF8A5B" stroke-width="2"/>
+    <circle cx="1180" cy="565" r="8" fill="#FF6B47"/>
+  </g>
+</svg>

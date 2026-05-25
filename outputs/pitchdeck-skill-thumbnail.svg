@@ -1,0 +1,125 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1614"/>
+      <stop offset="1" stop-color="#0d0b0a"/>
+    </linearGradient>
+    <linearGradient id="claude" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF8A5B"/>
+      <stop offset="1" stop-color="#E8623E"/>
+    </linearGradient>
+    <linearGradient id="genericSlide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a3633"/>
+      <stop offset="1" stop-color="#272422"/>
+    </linearGradient>
+    <linearGradient id="customSlide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F0EBE4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="8" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.45"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  
+  <!-- subtle grid -->
+  <g opacity="0.05" stroke="#FF8A5B" stroke-width="1">
+    <path d="M0 180 H1280 M0 360 H1280 M0 540 H1280"/>
+    <path d="M213 0 V720 M426 0 V720 M640 0 V720 M853 0 V720 M1066 0 V720"/>
+  </g>
+
+  <!-- Terminal top bar -->
+  <rect x="0" y="0" width="1280" height="44" fill="#0a0908"/>
+  <circle cx="24" cy="22" r="7" fill="#FF5F57"/>
+  <circle cx="48" cy="22" r="7" fill="#FEBC2E"/>
+  <circle cx="72" cy="22" r="7" fill="#28C840"/>
+  <text x="640" y="29" font-family="Menlo, Monaco, monospace" font-size="14" fill="#7a716a" text-anchor="middle">claude-code  —  skill: pitch-deck-transformer</text>
+
+  <!-- Skill tag (small) -->
+  <g transform="translate(80,90)">
+    <rect width="170" height="34" rx="6" fill="url(#claude)"/>
+    <text x="85" y="23" font-family="Menlo, Monaco, monospace" font-size="15" font-weight="700" fill="#1a1614" text-anchor="middle">CLAUDE SKILL</text>
+  </g>
+  <text x="262" y="115" font-family="Menlo, Monaco, monospace" font-size="16" fill="#7a716a">~ /skills/pitch-deck</text>
+
+  <!-- TITLE -->
+  <g font-family="Helvetica Neue, Arial Black, sans-serif" font-weight="900">
+    <text x="80" y="195" font-size="76" fill="#FFFFFF" letter-spacing="-2">eBay Pitch Deck</text>
+    <text x="80" y="265" font-size="44" fill="#7a716a" letter-spacing="-1" font-weight="700">transformed into your</text>
+    <text x="80" y="345" font-size="76" fill="url(#claude)" letter-spacing="-2">CUSTOM Brand Deck</text>
+  </g>
+
+  <!-- Robot mascot (2in x 2in @ 96dpi = 192x192) -->
+  <g transform="translate(910,140) scale(1.067)">
+    <!-- antenna -->
+    <line x1="55" y1="-10" x2="55" y2="-32" stroke="#FF8A5B" stroke-width="4"/>
+    <circle cx="55" cy="-36" r="6" fill="#FF8A5B"/>
+    <!-- head -->
+    <rect x="10" y="-10" width="90" height="78" rx="14" fill="#3a2a22" stroke="#FF8A5B" stroke-width="3"/>
+    <!-- visor -->
+    <rect x="20" y="8" width="70" height="34" rx="8" fill="#0d0a08"/>
+    <!-- eyes -->
+    <circle cx="40" cy="25" r="6" fill="#FF8A5B"/>
+    <circle cx="70" cy="25" r="6" fill="#FF8A5B"/>
+    <!-- smile -->
+    <path d="M40 54 Q55 64 70 54" stroke="#FF8A5B" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- body -->
+    <rect x="0" y="74" width="110" height="70" rx="12" fill="#2a201a" stroke="#FF8A5B" stroke-width="3"/>
+    <rect x="20" y="92" width="70" height="6" rx="3" fill="#FF8A5B" opacity="0.7"/>
+    <rect x="20" y="106" width="50" height="6" rx="3" fill="#FF8A5B" opacity="0.4"/>
+    <!-- arms -->
+    <rect x="-14" y="84" width="14" height="40" rx="6" fill="#3a2a22" stroke="#FF8A5B" stroke-width="3"/>
+    <rect x="110" y="84" width="14" height="40" rx="6" fill="#3a2a22" stroke="#FF8A5B" stroke-width="3"/>
+  </g>
+
+  <!-- LEFT STACK: generic eBay-ish slides -->
+  <g transform="translate(120,430)" filter="url(#shadow)">
+    <!-- back slides -->
+    <rect x="30" y="-20" width="320" height="200" rx="8" fill="#2a2725" stroke="#3a3633" stroke-width="1"/>
+    <rect x="15" y="-10" width="320" height="200" rx="8" fill="#322e2b" stroke="#403b37" stroke-width="1"/>
+    <!-- top slide -->
+    <rect x="0" y="0" width="320" height="200" rx="8" fill="url(#genericSlide)" stroke="#4a443f" stroke-width="1"/>
+    <!-- ebay-style colored dots -->
+    <circle cx="30" cy="28" r="9" fill="#E53238"/>
+    <circle cx="50" cy="28" r="9" fill="#0064D2"/>
+    <circle cx="70" cy="28" r="9" fill="#F5AF02"/>
+    <circle cx="90" cy="28" r="9" fill="#86B817"/>
+    <text x="30" y="78" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="800" fill="#e8e3dd">Pitch Deck</text>
+    <text x="30" y="100" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#8a8079">Generic Template</text>
+    <rect x="30" y="118" width="220" height="6" rx="3" fill="#4a443f"/>
+    <rect x="30" y="132" width="180" height="6" rx="3" fill="#4a443f"/>
+    <rect x="30" y="146" width="200" height="6" rx="3" fill="#4a443f"/>
+    <rect x="30" y="160" width="120" height="6" rx="3" fill="#4a443f"/>
+  </g>
+  <text x="280" y="665" font-family="Menlo, Monaco, monospace" font-size="16" fill="#7a716a" text-anchor="middle">input.pptx</text>
+
+  <!-- ARROW -->
+  <g transform="translate(560,520)">
+    <circle cx="40" cy="0" r="46" fill="#1a1614" stroke="url(#claude)" stroke-width="3"/>
+    <polygon points="20,-18 20,18 60,0" fill="url(#claude)"/>
+    <rect x="-2" y="-8" width="22" height="16" fill="url(#claude)"/>
+  </g>
+
+  <!-- RIGHT STACK: custom branded -->
+  <g transform="translate(810,430)" filter="url(#shadow)">
+    <rect x="30" y="-20" width="320" height="200" rx="8" fill="#FFE9D8" stroke="#FFD0AE" stroke-width="1"/>
+    <rect x="15" y="-10" width="320" height="200" rx="8" fill="#FFF5EC" stroke="#FFD9BD" stroke-width="1"/>
+    <rect x="0" y="0" width="320" height="200" rx="8" fill="url(#customSlide)" stroke="#E0D8CB" stroke-width="1"/>
+    <!-- brand mark -->
+    <rect x="24" y="20" width="34" height="34" rx="8" fill="url(#claude)"/>
+    <rect x="32" y="30" width="18" height="4" fill="#fff"/>
+    <rect x="32" y="40" width="12" height="4" fill="#fff"/>
+    <text x="68" y="44" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="800" fill="#1a1614">YOUR BRAND</text>
+    <text x="24" y="90" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="900" fill="#1a1614" letter-spacing="-0.5">Series A Raise</text>
+    <text x="24" y="112" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#6b5d52">Tailored. Branded. Ready.</text>
+    <rect x="24" y="128" width="80" height="40" rx="6" fill="url(#claude)"/>
+    <rect x="112" y="128" width="80" height="40" rx="6" fill="#1a1614"/>
+    <rect x="200" y="128" width="80" height="40" rx="6" fill="#FFE9D8" stroke="#FFD0AE"/>
+  </g>
+  <text x="970" y="665" font-family="Menlo, Monaco, monospace" font-size="16" fill="#FF8A5B" text-anchor="middle">custom.pptx</text>
+</svg>

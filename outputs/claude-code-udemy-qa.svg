@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1033"/>
+      <stop offset="1" stop-color="#0a0518"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF9A3C"/>
+      <stop offset="1" stop-color="#E8541E"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B68AFF"/>
+      <stop offset="1" stop-color="#7A3CFF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7A3CFF" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#7A3CFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  
+  <!-- Grid pattern -->
+  <g stroke="#2a1a55" stroke-width="1" opacity="0.5">
+    <path d="M0 120 L1280 120 M0 240 L1280 240 M0 360 L1280 360 M0 480 L1280 480 M0 600 L1280 600"/>
+    <path d="M160 0 L160 720 M320 0 L320 720 M480 0 L480 720 M640 0 L640 720 M800 0 L800 720 M960 0 L960 720 M1120 0 L1120 720"/>
+  </g>
+
+  <!-- Glow behind robot -->
+  <ellipse cx="1000" cy="380" rx="320" ry="320" fill="url(#glow)"/>
+
+  <!-- Floating question marks -->
+  <g font-family="Impact, Arial Black, sans-serif" font-weight="900">
+    <text x="80" y="180" font-size="110" fill="#7A3CFF" opacity="0.35" transform="rotate(-15 80 180)">?</text>
+    <text x="180" y="640" font-size="140" fill="#FF9A3C" opacity="0.3" transform="rotate(20 180 640)">?</text>
+    <text x="780" y="120" font-size="90" fill="#B68AFF" opacity="0.4" transform="rotate(15 780 120)">?</text>
+    <text x="1180" y="680" font-size="100" fill="#FF9A3C" opacity="0.35" transform="rotate(-10 1180 680)">?</text>
+  </g>
+
+  <!-- Robot character -->
+  <g transform="translate(1000 380)">
+    <!-- Antenna -->
+    <line x1="0" y1="-180" x2="0" y2="-220" stroke="#B68AFF" stroke-width="6"/>
+    <circle cx="0" cy="-230" r="12" fill="url(#orange)"/>
+    <circle cx="0" cy="-230" r="20" fill="#FF9A3C" opacity="0.3"/>
+    
+    <!-- Head -->
+    <rect x="-130" y="-180" width="260" height="220" rx="40" fill="url(#purple)" stroke="#FFFFFF" stroke-width="4"/>
+    <rect x="-130" y="-180" width="260" height="60" rx="40" fill="#5A2BCC" opacity="0.4"/>
+    
+    <!-- Eyes -->
+    <circle cx="-55" cy="-70" r="32" fill="#0a0518"/>
+    <circle cx="55" cy="-70" r="32" fill="#0a0518"/>
+    <circle cx="-50" cy="-75" r="14" fill="#FF9A3C"/>
+    <circle cx="60" cy="-75" r="14" fill="#FF9A3C"/>
+    <circle cx="-46" cy="-79" r="5" fill="#FFFFFF"/>
+    <circle cx="64" cy="-79" r="5" fill="#FFFFFF"/>
+    
+    <!-- Mouth grid -->
+    <rect x="-50" y="0" width="100" height="22" rx="6" fill="#0a0518"/>
+    <g fill="#FF9A3C">
+      <rect x="-44" y="4" width="12" height="14"/>
+      <rect x="-26" y="4" width="12" height="14"/>
+      <rect x="-8" y="4" width="12" height="14"/>
+      <rect x="10" y="4" width="12" height="14"/>
+      <rect x="28" y="4" width="12" height="14"/>
+    </g>
+    
+    <!-- Ears -->
+    <rect x="-150" y="-110" width="20" height="50" rx="6" fill="#5A2BCC"/>
+    <rect x="130" y="-110" width="20" height="50" rx="6" fill="#5A2BCC"/>
+    
+    <!-- Body / shoulders -->
+    <rect x="-90" y="40" width="180" height="40" rx="12" fill="#5A2BCC"/>
+    
+    <!-- Speech bubble Q -->
+    <g transform="translate(-180 -150)">
+      <circle cx="0" cy="0" r="55" fill="url(#orange)" stroke="#FFFFFF" stroke-width="4"/>
+      <text x="0" y="20" font-family="Impact, Arial Black, sans-serif" font-size="80" font-weight="900" fill="#FFFFFF" text-anchor="middle">Q</text>
+    </g>
+    <g transform="translate(180 -120)">
+      <circle cx="0" cy="0" r="48" fill="#FFFFFF" stroke="#FF9A3C" stroke-width="4"/>
+      <text x="0" y="18" font-family="Impact, Arial Black, sans-serif" font-size="68" font-weight="900" fill="#7A3CFF" text-anchor="middle">A</text>
+    </g>
+  </g>
+
+  <!-- CLAUDE CODE tag -->
+  <g transform="translate(60 90)">
+    <rect x="0" y="0" width="280" height="50" rx="25" fill="url(#orange)"/>
+    <text x="140" y="35" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">CLAUDE CODE</text>
+  </g>
+
+  <!-- Main Title -->
+  <g font-family="Impact, Arial Black, sans-serif" font-weight="900">
+    <text x="60" y="260" font-size="92" fill="#FFFFFF" letter-spacing="-2">COURSE Q&amp;A</text>
+    <text x="60" y="355" font-size="92" fill="url(#orange)" letter-spacing="-2">GENERATION</text>
+    <text x="60" y="430" font-size="56" fill="#B68AFF" letter-spacing="-1">FOR UDEMY INSTRUCTORS</text>
+  </g>
+
+  <!-- Bottom accent bar -->
+  <rect x="60" y="475" width="8" height="180" fill="url(#orange)"/>
+  <text x="92" y="525" font-family="Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">Automate student questions</text>
+  <text x="92" y="565" font-family="Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">Build smarter answer banks</text>
+  <text x="92" y="605" font-family="Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">Powered by Claude AI</text>
+
+  <!-- Tutorial corner -->
+  <g transform="translate(60 645)">
+    <rect width="160" height="46" rx="6" fill="#FF9A3C"/>
+    <text x="80" y="32" font-family="Impact, Arial Black, sans-serif" font-size="26" fill="#0a0518" text-anchor="middle" letter-spacing="2">TUTORIAL</text>
+  </g>
+</svg>
